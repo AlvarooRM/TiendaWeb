@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel de Administración - TiendaBasket</title>
+        <link rel="stylesheet" href="static/css/style.css">
+      
+    </head>
+    <body>
+
+        <header>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <h1>TiendaBasket - Panel de Administración</h1>
+        </header>
+
+        <nav id="side-menu">
+            <div class="close-menu" onclick="toggleMenu()">&times;</div>
+            <a href="#">Productos Activos</a>
+            <a href="#">Últimos Pedidos</a>
+            <a href="#">Crear Nuevo Producto</a>
+            <a href="Principal.html">Cerrar Sesión</a>
+        </nav>
+
+        <section class="main-section admin-section" id="panel-administracion">
+            <h2>Panel de Administración</h2>
+
+            <h3>Productos Activos</h3>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Imágenes</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Fecha de Creación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Zapatillas de Baloncesto</td>
+                        <td>Zapatillas de alta calidad para rendimiento óptimo
+                            en la cancha.</td>
+                        <td><img src="static/img/zapatillas.jpeg" alt="Zapatillas"></td>
+                        <td>$99.99</td>
+                        <td>50</td>
+                        <td>2023-01-15</td>
+                        <td>
+                            <a href="#" onclick="openEditProductModal()">Editar</a>
+                            <a href="#">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Balón Oficial NBA</td>
+                        <td>Balón de baloncesto oficial de la NBA con agarre
+                            superior.</td>
+                        <td><img src="static/img/balon.jpg" alt="Balón"></td>
+                        <td>$29.99</td>
+                        <td>100</td>
+                        <td>2023-01-10</td>
+                        <td>
+                            <a href="#" onclick="openEditProductModal()">Editar</a>
+                            <a href="#">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="product-actions">
+                <a href="#">Editar Producto</a>
+                <a href="#">Eliminar Producto</a>
+                <a href="#">Crear Nuevo Producto</a>
+            </div>
+
+            <h3>Últimos Pedidos</h3>
+            <table class="order-summary-table">
+                <thead>
+                    <tr>
+                        <th>Número de Pedido</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345</td>
+                        <td>2023-01-20</td>
+                        <td>$129.98</td>
+                    </tr>
+                    <tr>
+                        <td>12344</td>
+                        <td>2023-01-18</td>
+                        <td>$59.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="modal" id="editProductModal">
+            <div class="modal-content">
+                <form id="editProductForm">
+                    <label for="productName">Nombre:</label>
+                    <input type="text" id="productName" name="productName"
+                        required>
+
+                    <label for="productPrice">Precio:</label>
+                    <input type="number" id="productPrice" name="productPrice"
+                        required>
+
+                    <label for="productDescription">Descripción:</label>
+                    <textarea id="productDescription" name="productDescription"
+                        required></textarea>
+
+                    <label for="productStock">Stock:</label>
+                    <input type="number" id="productStock" name="productStock"
+                        required>
+
+
+                    <button type="submit">Guardar Cambios</button>
+                    <button type="button" onclick="closeEditProductModal()">Cancelar</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 TiendaBasket. Todos los derechos reservados.</p>
+        </footer>
+
+        <script src="static/js/app.js"></script>
+        <script>
+        function openEditProductModal() {
+            document.getElementById('editProductModal').style.display = 'flex';
+        }
+
+        function closeEditProductModal() {
+            document.getElementById('editProductModal').style.display = 'none';
+        }
+
+    </script>
+    </body>
+</html>

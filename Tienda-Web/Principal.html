@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaBasket - Tu Tienda de Baloncesto</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <h1>TiendaBasket</h1>
+    </header>
+
+    <nav id="side-menu">
+        <div class="close-menu" onclick="toggleMenu()">&times;</div>
+        <a href="Principal.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="log-in.html">Zona Usuarios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="admin.html">Zona Administración</a>
+    </nav>
+
+    <section class="main-section"> 
+            <!-- <img src="img/hero.png" alt="Hero Image"> -->
+            <div class="welcome-message">
+                <h2>Bienvenido a TiendaBasket</h2>
+                <!-- <p>Descubre la mejor selección de productos de baloncesto. ¡Encuentra lo que necesitas para destacar en la cancha!</p> -->
+                <a href="#productos-destacados" class="cta-button">Ver Productos Destacados</a>
+            </div>
+    </section>
+
+
+    <section class="main-section" id="productos-destacados">
+        <h2>Productos Destacados</h2>
+        <div class="featured-products">
+            <!-- Agrega aquí tus imágenes de productos destacados -->
+            <a href="producto.html"><img src="/static/img/peto-bulls.jpg" alt="peto-bulls"></a>
+            <a href="producto.html"><img src="/static/img/peto-curry.jpg" alt="peto-curry"></a>
+            <a href="producto.html"><img src="/static/img/peto-lebron.jpg" alt="peto-lebron"></a>
+        </div>
+    </section>
+
+    <section class="main-section" id="testimonios">
+        <h2>Testimonios de Clientes</h2>
+        <div class="reviews">
+            <h3>Reseñas y Calificaciones</h3>
+            <div class="review">
+                <h4>Usuario 1</h4>
+                <p>Muy satisfecho con el producto. Gran calidad y comodidad.</p>
+            </div>
+            <div class="review">
+                <h4>Usuario 2</h4>
+                <p>Excelente servicio al cliente. El producto llegó antes de lo esperado.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 TiendaBasket. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

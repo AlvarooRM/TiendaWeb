@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TiendaBasket</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <h1>TiendaBasket - Contacto</h1>
+    </header>
+
+    <nav id="side-menu">
+        <div class="close-menu" onclick="toggleMenu()">&times;</div>
+        <a href="Principal.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="log-in.html">Zona Usuarios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="admin.html">Zona Administración</a>
+    </nav>
+
+    <section class="main-section contact-section" id="contacto">
+        <h2>Contacto</h2>
+
+        <!-- Formulario de contacto -->
+        <div class="contact-form">
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="contact-info">
+            <h3>Información de Contacto</h3>
+            <p>Calle cesur, Málaga</p>
+            <p>Teléfono: +1 234 567 890</p>
+            <p>Correo Electrónico: info@tiendabasket.com</p>
+
+            <!-- Horario de atención -->
+            <h3>Horario de Atención</h3>
+            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+        </div>
+
+        <!-- Ubicación en un mapa -->
+        <div class="map-container">
+            <!-- Inserta aquí el código para integrar un mapa, por ejemplo, mediante Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.1180296179286!2d-4.368210224358697!3d36.719726472270125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7259120bfc4db3%3A0xec0ecedd8dc61902!2sCesur%20M%C3%A1laga%20Este%20%F0%9F%A5%87%20-%20Formaci%C3%B3n%20Profesional!5e0!3m2!1ses!2ses!4v1701628310005!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 TiendaBasket. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>
